@@ -1,0 +1,105 @@
+:focus{
+outline: none!important;
+}
+body{
+background-image: url(/style/bg-player.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.playlist{
+padding: 0;
+margin: 0;
+}
+.playlist li{
+list-style: none;
+padding: 15px;
+cursor: pointer;
+background-color: #1e202c;
+color: #fff;
+}
+.playlist li.selected{
+background-color: #083105;
+}
+.playlist li .title{
+float: left;
+}
+.playlist li .duration{
+float: right;
+color: #848689;
+}
+.playlist li .icon{
+color: #4d515a;
+float: left;
+width: 30px;
+}
+.playlist li + li{
+border-top: 1px solid #262f36;
+}
+.search{
+width: 100%;
+padding: 8px 15px;
+color: #333;
+border: 1px solid #1e202c;
+margin: 15px 0;
+border-radius: 25px;
+}
+.player{
+background-color: #161b1e;
+margin: 15px 0;
+padding: 4px 10px;
+position: relative;
+}
+.player .controls{
+float: left;
+width: 8%;
+}
+.player .fa-pause, .player.playing .fa-play, .playlist li .fa-pause, .playlist li.true .fa-play{
+display: none;
+}
+.player.playing .fa-pause, .playlist li.true .fa-pause{
+display: inline-block;
+}
+
+.player .progress-bar{
+position: relative;
+float: left;
+width: 80%;
+height: 5px;
+background-color: #4c4c4c;
+margin-top: 14px;
+cursor: pointer;
+}
+.player .sound{
+position: relative;
+float: left;
+width: 10%;
+height: 5px;
+background-color: #4c4c4c;
+margin-top: 14px;
+margin-left: 2%;
+cursor: pointer;
+}
+.player .controls button{
+border: 0;
+background-color: transparent;
+padding: 5px;
+color: #fff;
+}
+.player .timeline{
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+width: 50%;
+background-color: #33b5e6;
+z-index: 5;
+}
+.playlist li .elapsed, .playlist li.selected .total{
+display: none;
+}
+.playlist li.selected .elapsed{
+display: inline;
+}
+.hidden{
+display: none;
+}
